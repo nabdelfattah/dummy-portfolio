@@ -1,0 +1,99 @@
+/************************************************/
+/* computer */
+/************/
+@media (max-width: 1000px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+/************************************************/
+/* tablet */
+/**********/
+
+@media (max-width: 800px) {
+  .container {
+    row-gap: 8rem;
+  }
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+  .bio__img {
+    grid-row: 1;
+    justify-self: center;
+    margin-bottom: 4rem;
+  }
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects__container {
+    row-gap: 6rem;
+    justify-items: center;
+  }
+  .project__data:nth-of-type(2) {
+    order: 1;
+  }
+  .client__testimonial {
+    font-size: var(--font-size-24);
+  }
+  .contact {
+    row-gap: 6rem;
+  }
+  .contact__form-box {
+    order: -1;
+  }
+}
+
+/************************************************/
+/* mobile phone */
+/****************/
+
+@media (max-width: 500px) {
+  .bio__img img {
+    width: 100%;
+  }
+
+  /* burger menue */
+
+  .burger_menue {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    cursor: pointer;
+  }
+  .burger_menue_bar {
+    height: 0.3rem;
+    width: 4.375rem;
+    background-color: var(--color-text);
+    transition: var(--transition-timing);
+  }
+
+  /* Burger menue icon animation */
+  header:has(.burger_menue__checkbox:checked) .burger_menue_bar:nth-child(1) {
+    transform: translateY(10px) rotate(40deg);
+  }
+  header:has(.burger_menue__checkbox:checked) .burger_menue_bar:nth-child(2) {
+    opacity: 0;
+    visibility: hidden;
+  }
+  header:has(.burger_menue__checkbox:checked) .burger_menue_bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-40deg);
+  }
+
+  .navigation {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--color-text);
+    background: var(--color-background);
+    transition: var(--transition-timing);
+    display: flex;
+    justify-content: center;
+    z-index: -3;
+  }
+  header:has(.burger_menue__checkbox:checked) .navigation {
+    z-index: 1;
+    top: 100%;
+  }
+}

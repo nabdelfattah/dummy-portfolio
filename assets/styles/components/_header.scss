@@ -1,0 +1,90 @@
+.header {
+  padding: 3rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+}
+header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  border-bottom: 1px solid var(--color-input-border);
+  z-index: -1;
+  background-color: var(--color-background);
+}
+
+.navigation__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+.navigation__link:hover,
+.navigation__link:active {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+
+.container:has(#bio:target) a[href="#bio"],
+.container:has(#skills:target) a[href="#skills"],
+.container:has(#media:target) a[href="#media"],
+.container:has(#projects:target) a[href="#projects"],
+.container:has(#clients:target) a[href="#clients"],
+.container:has(#contact:target) a[href="#contact"] {
+  color: var(--color-blue);
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+}
+
+/* toggle */
+.toggle {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+.toggle__title {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-18);
+}
+.toggle__checkbox {
+  display: none;
+}
+.toggle__label {
+  position: relative;
+  height: 2.2rem;
+  width: 4.5rem;
+  background-color: var(--color-black);
+  border-radius: 1.5rem;
+  padding: 0.3rem 0.4rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.toggle__label::after {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  transition: 0.3s;
+}
+.toggle__checkbox:checked + .toggle__label {
+  background-color: var(--color-white);
+}
+.toggle__checkbox:checked + .toggle__label::after {
+  background-color: var(--color-green);
+  transform: translate(2.1rem);
+}
+
+/* burger menue */
+.burger_menue__checkbox {
+  display: none;
+}

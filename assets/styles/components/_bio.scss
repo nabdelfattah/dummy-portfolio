@@ -1,0 +1,70 @@
+.bio {
+  gap: 7.4rem;
+  align-items: start;
+}
+.bio__heading {
+  font-size: var(--font-size-70);
+  font-weight: var(--font-weight-bold);
+}
+.bio__objective {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-regular);
+  margin: 3rem 0 8rem;
+}
+.bio__name {
+  width: 100px;
+  height: 100px;
+  font-weight: var(--font-weight-semi-bold);
+}
+.bio__almdrasa {
+  color: var(--color-green);
+}
+.bio__facebook {
+  color: var(--color-blue);
+}
+.bio__twitter {
+  color: var(--color-light-blue);
+}
+.bio__linkedin {
+  color: var(--color-dark-blue);
+}
+.bio__youtube {
+  color: var(--color-red);
+}
+.bio__link:link,
+.bio__link:visited {
+  font-weight: var(--font-weight-semi-bold);
+  font-size: 2.4rem;
+  text-decoration: none;
+}
+.bio__link-contact {
+  padding: 0.7rem 4.7rem;
+}
+.bio__link-download {
+  padding: 0.7rem 0;
+  margin-inline-start: 1.4rem;
+}
+
+.bio__arrow {
+  display: inline-block;
+  animation: jump 1s infinite alternate ease-in-out;
+}
+.bio__img {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+.bio__img::after {
+  content: "";
+  position: absolute;
+  background-color: var(--color-box-img);
+  width: 30rem;
+  height: 30rem;
+  border-radius: 1.8rem;
+  z-index: -1;
+}
+.bio__img img {
+  width: 27rem;
+}

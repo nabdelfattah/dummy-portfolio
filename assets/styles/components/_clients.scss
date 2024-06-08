@@ -1,0 +1,18 @@
+.clients .heading-secondary {
+  align-self: flex-start;
+}
+.client__testimonials {
+  align-self: flex-start;
+}
+.client__testimonials-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.client__testimonial {
+  flex-basis: 100%;
+  flex-shrink: 0; 
+  font-size: var(--font-size-40);
+  line-height: 1.7;
+  scroll-snap-align: start;
+}

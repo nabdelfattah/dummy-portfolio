@@ -1,0 +1,18 @@
+.skills .heading-secondary {
+  align-self: flex-start;
+}
+.skills .grid {
+  row-gap: 5rem;
+  align-self: flex-start;
+}
+.skill__item {
+  transition: var(--transition-timing);
+  user-select: none;
+}
+.skill__item:hover {
+  text-shadow: 0 0 2px var(--color-green);
+}
+.skill__years {
+  font-style: var(--font-size-20);
+  margin-top: 1rem;
+}

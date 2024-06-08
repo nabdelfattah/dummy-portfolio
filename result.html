@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/styles/general.css" rel="stylesheet" />
+    <link href="./assets/styles/styles.css" rel="stylesheet" />
+    <title>Result</title>
+    <style>
+      .heading-secondary {
+        margin-top: 10rem;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <h2 class="heading-secondary">Your Submitted Data:</h2>
+    <div id="results"></div>
+    <br />
+    <a href="/">Back to Home</a>
+
+    <script>
+      const resultsDiv = document.getElementById("results");
+
+      let urlParams = new URLSearchParams(window.location.search);
+      urlParams.forEach((value, name) => {
+        resultsDiv.append(`${name}: ${value}`);
+        resultsDiv.append(document.createElement("br"));
+      });
+    </script>
+  </body>
+</html>
