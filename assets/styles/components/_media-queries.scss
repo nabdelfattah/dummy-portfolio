@@ -1,15 +1,8 @@
-/************************************************/
-/* computer */
-/************/
 @media (max-width: 1000px) {
   html {
     font-size: 8px;
   }
 }
-
-/************************************************/
-/* tablet */
-/**********/
 
 @media (max-width: 800px) {
   .container {
@@ -44,17 +37,10 @@
   }
 }
 
-/************************************************/
-/* mobile phone */
-/****************/
-
 @media (max-width: 500px) {
   .bio__img img {
     width: 100%;
   }
-
-  /* burger menue */
-
   .burger_menue {
     display: flex;
     flex-direction: column;
@@ -67,8 +53,6 @@
     background-color: var(--color-text);
     transition: var(--transition-timing);
   }
-
-  /* Burger menue icon animation */
   header:has(.burger_menue__checkbox:checked) .burger_menue_bar:nth-child(1) {
     transform: translateY(10px) rotate(40deg);
   }

@@ -12,20 +12,17 @@
   </head>
   <body>
     <div class="container">
-      <!--Background Video-->
       <video class="background-video" autoplay loop muted>
         <source src="assets/video-loop.mp4" type="video/mp4" />
       </video>
 
       <header class="header">
-        <!-- burger menue icon -->
         <label for="menue" class="burger_menue">
           <div class="burger_menue_bar"></div>
           <div class="burger_menue_bar"></div>
           <div class="burger_menue_bar"></div>
         </label>
         <input id="menue" class="burger_menue__checkbox" type="checkbox" />
-        <!-- navigation -->
         <nav class="navigation">
           <ul class="navigation__list">
             <li><a href="#bio" class="navigation__link">Bio</a></li>
@@ -36,7 +33,6 @@
             <li><a href="#contact" class="navigation__link">Contact</a></li>
           </ul>
         </nav>
-        <!-- switch to dark mode -->
         <div class="toggle">
           <h3 class="toggle__title">Switch Mode</h3>
           <input
@@ -55,7 +51,6 @@
             Hi There, I'M A Passionate Software Engineer
           </h1>
           <p class="bio__objective">
-            <!--span instead of strong as we want it semi-bold, not bold-->
             My name is <span class="bio__name">First Last</span>, a co-founder
             of
             <a href="https://www.almdrasa.com" class="bio__almdrasa"
@@ -120,22 +115,16 @@
       </section>
 
       <section class="media" id="media">
-        <!-- poster attribute adds a thumbnail to the video -->
         <video
           class="media__video"
           poster="assets/images/thumbnail.jpg"
           controls
           src="assets/video.mp4"
         >
-          <!-- we add source element if we wanna supply muliple sourses. 
-            as if the first doesn't work, the second would, the third would, ...
-            If we had one video, we can omit <source> and add src="" to the <video> itself -->
           <source src="assets/video.ogg" type="video/ogg" />
-          <!--ogg has smaller size-->
           <source src="assets/video.mp4" type="video/mp4" />
           <source src="assets/video.webm" type="video/webm" />
           Your browser doesn't support video tag
-          <!--fallback message-->
         </video>
       </section>
 
@@ -260,7 +249,6 @@
           <form action="result.html" class="contact__form">
             <div class="contact__data">
               <input type="text" name="name" placeholder="Full Name" required />
-              <!-- pattern attr take regex, it helps show the num pad when typing -->
               <input
                 type="tel"
                 name="phone"
